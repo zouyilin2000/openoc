@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openoc"
+version = "0.1.0"
+description = "free optimal control software"
+readme = "README.rst"
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "sympy", "numba", "cyipopt"]
+authors = [
+  { name="Zou Yilin", email="safe.dust4704@fastmail.com" },
+]
