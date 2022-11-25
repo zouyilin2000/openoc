@@ -17,7 +17,7 @@ The easiest way to install openoc is using conda_:
 
 1. Install Anaconda_ and create a new environment with **Python 3.9.***
 
-1. Activate the environment, and run in the terminal:
+2. Activate the environment, and run in the terminal:
 
    .. code-block:: console
 
