@@ -1,5 +1,5 @@
 openoc: free optimal control software
-====================================
+=====================================
 
 Introduction
 ------------
@@ -11,9 +11,25 @@ Introduction
 
 - **Fast**: Openoc is fast. It uses various techniques to speed up the entire compilation & solution process, including symbolic differentiation (with SymPy_), JIT compilation (with Numba_), meta-programming, and more.
 
+Installation
+------------
+The easiest way to install openoc is using conda_:
+
+1. Install Anaconda_ and create a new environment with **Python 3.9.***
+
+1. Activate the environment, and run in the terminal:
+
+   .. code-block:: console
+
+       conda install numpy scipy sympy numba
+       conda install -c conda-forge cyipopt
+       pip install openoc
+
 License
 -------
 MIT. Feel safe to use it in your research & projects.
 
 .. _SymPy: https://www.sympy.org/
 .. _Numba: https://numba.pydata.org/
+.. _conda: https://conda.io/
+.. _Anaconda: https://www.anaconda.com/
