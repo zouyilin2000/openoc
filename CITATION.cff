@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: 'openoc: free optimal control software'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Yilin
+    family-names: Zou
+repository-code: 'https://github.com/zouyilin2000/openoc'
+abstract: >-
+  Openoc is a Python package that solves optimal
+  control problems numerically. It utilizes advanced
+  techniques to be powerful, easy to use, and fast.
+  Openoc employs a multi-phase optimal control model
+  which allows continuous/non-continuous state and
+  control variables, path/integral/boundary
+  constraints, and fixed/free initial and terminal
+  time. Openoc provides a SymPy-based, intuitive
+  interface for defining and solving problems. Openoc
+  uses various techniques to speed up the entire
+  compilation & solution process, including symbolic
+  differentiation (with SymPy), JIT compilation (with
+  Numba), meta-programming, and more.
+keywords:
+  - Optimal Control
+  - Pseudo-spectral method
+license: MIT
