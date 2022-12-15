@@ -121,6 +121,7 @@ class FastFunc:
         if self._simplify:
             func = sp.simplify(func)
         if func.is_constant():
+            func = sp.sympify(func)
             self._value_consts = float(func)
             return ''
 
@@ -139,6 +140,7 @@ class FastFunc:
             if grad == 0:
                 continue
             if grad.is_constant():
+                grad = sp.simplify(grad)
                 self._grad_consts[j] = float(grad)
                 self._grad_index.append((j, []))
                 continue
@@ -161,6 +163,7 @@ class FastFunc:
                 if hess == 0:
                     continue
                 if hess.is_constant():
+                    hess = sp.simplify(hess)
                     self._hess_consts[(j, k)] = float(hess)
                     self._hess_index.append((j, k, []))
                     continue
