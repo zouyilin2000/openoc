@@ -149,6 +149,17 @@ class System:
             self._update_hessian_structure()
         return self
 
+    def update(self):
+        """Update the system after changing discretization scheme of any phase.
+        """
+        if not self.ok:
+            raise ValueError('System is not fully set')
+        self._update_lr_phase()
+        self._update_symbols()
+        self._update_bounds()
+        self._update_jacobian_structure()
+        self._update_hessian_structure()
+
     def _update_lr_phase(self):
         if self.n_p == 0:
             self.l_p = np.array([], dtype=np.int32)
@@ -275,7 +286,7 @@ class System:
 
     @property
     def ok(self) -> bool:
-        return self._objective_set
+        return self._phase_set and self._objective_set and self._system_constraint_set
 
     def _basic_value(self, x):
         sp = x[self.l_s:self.r_s]
